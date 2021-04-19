@@ -15,9 +15,16 @@ function App() {
   return (
     <div className="App">
       <header></header>
+      <div className='greeting-bar'>
         <h1>Get a Dog!</h1>
-      {console.log(imgSrc)}
-      {imgSrc !== null ? <img  className='landing-image' src={imgSrc} alt=''/> : null}
+        {imgSrc !== null ? <img className='landing-image' src={imgSrc} alt='' /> : null}
+        <a href="#" className='new_pic' onClick={() => axios.get("https://api.thedogapi.com/v1/images/search").then(res => {
+          setImgSrc(res.data[0].url);
+        })}>New Picture</a>
+      </div>
+       
+  
+    
       <footer>
         <ul className='footer-links'>
           <li className='link'><a target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/ethan-wright-91a75270/'>LinkedIn</a></li>
