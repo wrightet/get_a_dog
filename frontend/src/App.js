@@ -1,18 +1,22 @@
 import axios from 'axios';
 import './App.css';
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 
 function App() {
-  useEffect(() => {getPic()})
-  function getPic() {
-   return axios.get('https://api.thedogapi.com/v1/images/search')
-    .then(ans => ans.data[0].url);
-  };
+  const [imgSrc, setImgSrc] = useState(null);
+
+  useEffect(() => {
+    axios.get("https://api.thedogapi.com/v1/images/search").then(res => {
+      setImgSrc(res.data);
+    });
+  }, []);
+
+
   return (
     <div className="App">
         <h1>test</h1>
-        <img src={getPic()} alt="" ></img>
-
+      
+      {imgSrc !== null ? <img src={imgSrc} /> : null}
     </div>
   );
 }
