@@ -1,22 +1,22 @@
 import axios from 'axios';
 import './App.css';
 import React, {useEffect, useState} from 'react';
+import BreedList from './components/breed_list';
+import { Route, Link, HashRouter} from 'react-router-dom';
 
 function App() {
   const [imgSrc, setImgSrc] = useState(null);
-  const [breed, setBreeds] = useState([])
+ 
 
   useEffect(() => {
     axios.get("https://api.thedogapi.com/v1/images/search").then(res => {
       setImgSrc(res.data[0].url);
-    });
-    // axios.get('https://api.thedogapi.com/v1/breeds/').then(ans => console.log(ans))
-    axios.get('https://api.thedogapi.com/v1/breeds/').then(res => {console.log('res',res); setBreeds(res.data)})
-    console.log('breed',breed)
+    });   
   }, []);
 
 
   return (
+    <HashRouter>
     <div className="App">
       <header></header>
       <div className='greeting-bar'>
@@ -26,8 +26,9 @@ function App() {
           setImgSrc(res.data[0].url);
         })}>New Picture</a>
       </div>
-       
-  
+    
+       <Route exact path='/' component={BreedList}/>
+      
     
       <footer>
         <ul className='footer-links'>
@@ -37,6 +38,7 @@ function App() {
         </ul>
       </footer>
     </div>
+    </HashRouter>
   );
 }
 
