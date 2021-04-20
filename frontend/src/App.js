@@ -2,7 +2,8 @@ import axios from 'axios';
 import './App.css';
 import React, {useEffect, useState} from 'react';
 import BreedList from './components/breed_list';
-import { Route, Link, HashRouter} from 'react-router-dom';
+import DogShow from './components/dog_show';
+import { Route, HashRouter} from 'react-router-dom';
 
 function App() {
   const [imgSrc, setImgSrc] = useState(null);
@@ -28,6 +29,7 @@ function App() {
       </div>
     
        <Route exact path='/' component={BreedList}/>
+       <Route exact path='/:id' component={DogShow}/>
       
     
       <footer>
