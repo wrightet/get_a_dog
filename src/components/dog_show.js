@@ -28,22 +28,25 @@ function DogShow() {
                 weight:res.data.weight.imperial,
                 height:res.data.height.imperial,
                 bred_for: res.data.bred_for,
-                breed_group: res.data.breed_group
+                breed_group: res.data.breed_group,
+                image: res.data.reference_image_id
+                // res
 
             }
                 ))
-    }, {});
+    }, []);
+    console.log(dog);
     return (
     <div className='dog_facts'>
         <ul>
-                {/* <li><img src={`https://api.thedogapi.com/v1/images/${dog.reference_image_id}`} alt=""></img></li> */}
+                <li><img src={`https://cdn2.thedogapi.com/images/${dog.image}.jpg`} alt=""></img></li>
                 <li className='dog_fact_el'>{dog.name}</li>
                 <li className='dog_fact_el'>Bred For:{dog.bred_for}</li>
                 <li className='dog_fact_el'>Breed Group: {dog.breed_group}</li>
                 <li className='dog_fact_el'>Place of Origin: {dog.origin}</li>
                 <li className='dog_fact_el'>Life Span: {dog.life_span}</li>
                  <li className='dog_fact_el'>Height: {dog.height} inches</li>
-                <li className='dog_fact_el'>Weight: {dog.weight} lbs</li>
+                <li className='dog_fact_el'>Weight: {dog.weight} lbs</li> 
                 
                 
         </ul>

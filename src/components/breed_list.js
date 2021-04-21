@@ -6,7 +6,7 @@ function BreedList(){
     const [breeds, setBreeds] = useState([])
     useEffect(() => {
         axios.get('https://api.thedogapi.com/v1/breeds/').then(res => setBreeds(res.data))
-    }, {});
+    }, []);
     console.log('breeds', breeds)
 
     return(
