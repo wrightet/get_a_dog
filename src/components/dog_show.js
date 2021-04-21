@@ -1,5 +1,5 @@
-import React,  {useState, useEffect} from 'react';
-import {gql, useQuery} from '@apollo/client';
+import React,  {useState, useEffect, useParams} from 'react';
+// import {gql, useQuery} from '@apollo/client';
 import axios from 'axios';
 import '../App.css';
 // const GET_DOG = gql`
@@ -15,8 +15,12 @@ import '../App.css';
 function DogShow() {
     // const { id, name, life_span, origin, weight, height} = useQuery(getDog);
     const [dog, setDog] = useState({});
+    const href  = window.location.href.split('/');
+    const id = href[href.length - 1];
+    console.log(id)
     useEffect(() => {
-        axios.get('https://api.thedogapi.com/v1/breeds/:id')
+    
+        axios.get(`https://api.thedogapi.com/v1/breeds/${id}`)
         .then(
             res => setDog({
                 name:res.data.name,
@@ -29,7 +33,7 @@ function DogShow() {
 
             }
                 ))
-    }, []);
+    }, {});
     console.log('dog',dog)
     return (
     <div className='dog_facts'>
@@ -48,5 +52,6 @@ function DogShow() {
     </div>
     )
 }
+
 
 export default DogShow;

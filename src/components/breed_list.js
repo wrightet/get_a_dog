@@ -10,15 +10,14 @@ function BreedList(){
     console.log('breeds', breeds)
     return(
         <div className='breeds_list'>
-            <ul>
+           
                 {breeds.map(dog => (
                     // <li key={dog.id}>{dog.name}</li>
-                    <li key={dog.id}>
-                        <Link className='dog_link' to={`/${dog.id}`}>{dog.name}<img src={dog.reference_image_id} alt="" className="dog-photo" />
-                        </Link>
-                    </li>
+                    
+                     <div><Link to={`/${dog.id}`}></Link>{dog.name}</div>
+                    
                 ))}
-            </ul>
+           
         </div>
     )
 }
