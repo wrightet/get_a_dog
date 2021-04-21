@@ -47,10 +47,10 @@
 }
 
 footer{
-  position: relative;
+  position: absolute;
   bottom: 0;
   width: 100%;
-  min-height: 90vh; 
+  min-height: 4.5em; 
 }
 
 .footer-links{
@@ -156,4 +156,8 @@ a{
 .site-title{
   margin-left: 40vw;
   color: black;
+}
+
+.forward-back{
+
 }

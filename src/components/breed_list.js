@@ -29,8 +29,8 @@ function BreedList(){
                     
                 ))}
 
-                <button onClick={previous}>Prev</button> 
-                <button onClick={forward}>Next</button>
+                <button className='forward-back' onClick={previous}>Prev</button> 
+                <button className='forward-back'onClick={forward}>Next</button>
            
         </div>
     )

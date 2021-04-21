@@ -23,9 +23,10 @@ function App() {
       <div className='greeting-bar'>
        
         {imgSrc !== null ? <img className='landing-image' src={imgSrc} alt='' /> : null}
-        <a href="#" className='new_pic' onClick={() => axios.get("https://api.thedogapi.com/v1/images/search").then(res => {
+        {/* <a href="#" className='new_pic' onClick={() => axios.get("https://api.thedogapi.com/v1/images/search").then(res => {
           setImgSrc(res.data[0].url);
-        })}>New Picture</a>  <h1 className='site-title'><Link to="/">Get a Dog!</Link></h1>
+        })}>New Picture</a>   */}
+        <h1 className='site-title'><Link to="/">Get a Dog!</Link></h1>
       </div>
     
        <Route exact path='/' component={BreedList}/>
