@@ -16,14 +16,14 @@ function DogShow() {
     // const { id, name, life_span, origin, weight, height} = useQuery(getDog);
     const [dog, setDog] = useState({});
     useEffect(() => {
-        axios.get('https://api.thedogapi.com/v1/breeds/1')
+        axios.get('https://api.thedogapi.com/v1/breeds/:id')
         .then(
             res => setDog({
                 name:res.data.name,
                 life_span:res.data.life_span,
                 origin:res.data.origin,
                 weight:res.data.weight.imperial,
-                height:res.data.height.imerial,
+                height:res.data.height.imperial,
                 bred_for: res.data.bred_for,
                 breed_group: res.data.breed_group
 
