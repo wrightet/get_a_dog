@@ -50,7 +50,7 @@ footer{
   position: relative;
   bottom: 0;
   width: 100%;
-  min-height: 2.5rem; 
+  min-height: 90vh; 
 }
 
 .footer-links{
@@ -63,7 +63,7 @@ footer{
 
 .link {
   background-color: grey;
-  color: white;
+  /* color: white; */
   padding: 1em 1.5em;
   text-decoration: none;
   text-transform: uppercase;
@@ -128,4 +128,18 @@ a{
 .dog_fact_el{
   list-style: none;
   margin-top: 1vh;
+}
+
+.indiv-dog-breed{
+  padding-top: 1vh;
+}
+
+.dog-link{
+  cursor: hand;
+  color: black;
+}
+
+.dog-link:hover{
+  color: grey;
+  text-decoration: underline;
 }

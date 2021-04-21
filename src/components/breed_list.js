@@ -6,15 +6,16 @@ function BreedList(){
     const [breeds, setBreeds] = useState([])
     useEffect(() => {
         axios.get('https://api.thedogapi.com/v1/breeds/').then(res => setBreeds(res.data))
-    }, []);
+    }, {});
     console.log('breeds', breeds)
+
     return(
         <div className='breeds_list'>
            
                 {breeds.map(dog => (
                     // <li key={dog.id}>{dog.name}</li>
                     
-                     <div><Link to={`/${dog.id}`}></Link>{dog.name}</div>
+                    <Link key={dog.id} className='dog-link' to={`/${dog.id}`}><div className='indiv-dog-breed' key={dog.id}>{dog.name}</div></Link>
                     
                 ))}
            

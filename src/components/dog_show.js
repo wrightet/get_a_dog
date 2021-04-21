@@ -1,4 +1,4 @@
-import React,  {useState, useEffect, useParams} from 'react';
+import React,  {useState, useEffect} from 'react';
 // import {gql, useQuery} from '@apollo/client';
 import axios from 'axios';
 import '../App.css';
@@ -17,7 +17,6 @@ function DogShow() {
     const [dog, setDog] = useState({});
     const href  = window.location.href.split('/');
     const id = href[href.length - 1];
-    console.log(id)
     useEffect(() => {
     
         axios.get(`https://api.thedogapi.com/v1/breeds/${id}`)
@@ -34,7 +33,6 @@ function DogShow() {
             }
                 ))
     }, {});
-    console.log('dog',dog)
     return (
     <div className='dog_facts'>
         <ul>
