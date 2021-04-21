@@ -3,7 +3,7 @@ import './App.css';
 import React, {useEffect, useState} from 'react';
 import BreedList from './components/breed_list';
 import DogShow from './components/dog_show';
-import { Route, HashRouter} from 'react-router-dom';
+import { Route, HashRouter, Link} from 'react-router-dom';
 
 function App() {
   const [imgSrc, setImgSrc] = useState(null);
@@ -25,7 +25,7 @@ function App() {
         {imgSrc !== null ? <img className='landing-image' src={imgSrc} alt='' /> : null}
         <a href="#" className='new_pic' onClick={() => axios.get("https://api.thedogapi.com/v1/images/search").then(res => {
           setImgSrc(res.data[0].url);
-        })}>New Picture</a>  <h1 className='site-title'>Get a Dog!</h1>
+        })}>New Picture</a>  <h1 className='site-title'><Link style={{color:'black'}} to="/">Get a Dog!</Link></h1>
       </div>
     
        <Route exact path='/' component={BreedList}/>
