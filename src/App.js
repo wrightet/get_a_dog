@@ -19,13 +19,13 @@ function App() {
   return (
     <HashRouter>
     <div className="App">
-      <header></header>
+  
       <div className='greeting-bar'>
-        <h1>Get a Dog!</h1>
+       
         {imgSrc !== null ? <img className='landing-image' src={imgSrc} alt='' /> : null}
         <a href="#" className='new_pic' onClick={() => axios.get("https://api.thedogapi.com/v1/images/search").then(res => {
           setImgSrc(res.data[0].url);
-        })}>New Picture</a>
+        })}>New Picture</a>  <h1 className='site-title'>Get a Dog!</h1>
       </div>
     
        <Route exact path='/' component={BreedList}/>

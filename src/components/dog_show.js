@@ -39,7 +39,7 @@ function DogShow() {
     return (
     <div className='dog_facts'>
         <ul>
-                <li><img src={`https://cdn2.thedogapi.com/images/${dog.image}.jpg`} alt=""></img></li>
+                <li className='dog_fact_el'><img id='dog-image' src={`https://cdn2.thedogapi.com/images/${dog.image}.jpg`} alt=""></img></li>
                 <li className='dog_fact_el'>{dog.name}</li>
                 <li className='dog_fact_el'>Bred For:{dog.bred_for}</li>
                 <li className='dog_fact_el'>Breed Group: {dog.breed_group}</li>
