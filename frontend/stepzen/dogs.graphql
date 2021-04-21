@@ -1,0 +1,13 @@
+type Dog {
+    id: ID!
+    name: String!
+    life_span: String!
+    origin: String!
+    weight: String!
+    height: String!
+}
+
+type Query {
+    dogById (id: ID!): Dog
+     @rest (endpoint: "https://api.thedogapi.com/v1/breeds/$id")
+}
