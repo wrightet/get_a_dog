@@ -61,7 +61,7 @@ footer{
   justify-content: center;
 }
 
-.link {
+.footer-link {
   background-color: grey;
   /* color: white; */
   padding: 1em 1.5em;
@@ -70,21 +70,21 @@ footer{
   margin-right: 0.5vw;
 }
 
-.link:hover {
+.footer-link:hover {
   background-color: #555;
 }
 
-.link:active {
+.footer-link:active {
   background-color: black;
 }
 
-.link:visited {
+.footer-link:visited {
   background-color: #ccc;
 }
 
 a{
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .new_pic {

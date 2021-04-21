@@ -1,6 +1,7 @@
 import React,  {useState, useEffect} from 'react';
 // import {gql, useQuery} from '@apollo/client';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 import '../App.css';
 // const GET_DOG = gql`
 //     query getDog{
@@ -38,6 +39,7 @@ function DogShow() {
     console.log(dog);
     return (
     <div className='dog_facts'>
+            <Link to="/">Back</Link>
         <ul>
                 <li className='dog_fact_el'><img id='dog-image' src={`https://cdn2.thedogapi.com/images/${dog.image}.jpg`} alt=""></img></li>
                 <li className='dog_fact_el'>{dog.name}</li>
