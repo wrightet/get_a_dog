@@ -47,10 +47,11 @@
 }
 
 footer{
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
-  min-height: 4.5em; 
+
+  margin-top: 5vh;
 }
 
 .footer-links{
@@ -67,7 +68,8 @@ footer{
   padding: 1em 1.5em;
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: 0.5vw;
+  margin-right: 1vw;
+  margin-left: 1vw;
 }
 
 .footer-link:hover {
@@ -132,6 +134,9 @@ a{
   margin-top: 2vh;
 }
 
+.breeds_list{
+  margin-bottom: 3vh;
+}
 .indiv-dog-breed{
   padding-top: 1vh;
 }
@@ -159,5 +164,16 @@ a{
 }
 
 .forward-back{
+  margin-right: 2vw;
+  margin-left: 2vw;
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+  width: 5vw;
+  height:3vh;
+  background-color: gray;
+  border: none;
+}
 
+.forward-back:hover{
+  background-color: darkgrey;
 }

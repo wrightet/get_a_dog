@@ -21,7 +21,8 @@ function BreedList(){
     console.log(start, last)
     return(
         <div className='breeds_list'>
-           
+            <button className='forward-back' onClick={previous}>Prev</button>
+            <button className='forward-back' onClick={forward}>Next</button>
                 {breeds.slice(start,last).map(dog => (
                     // <li key={dog.id}>{dog.name}</li>
                     
@@ -29,8 +30,7 @@ function BreedList(){
                     
                 ))}
 
-                <button className='forward-back' onClick={previous}>Prev</button> 
-                <button className='forward-back'onClick={forward}>Next</button>
+               
            
         </div>
     )
