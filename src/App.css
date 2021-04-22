@@ -176,4 +176,5 @@ a{
 
 .forward-back:hover{
   background-color: darkgrey;
+  cursor: pointer;
 }

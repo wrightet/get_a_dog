@@ -9,7 +9,7 @@ function BreedList(){
     useEffect(() => {
         axios.get('https://api.thedogapi.com/v1/breeds/').then(res => setBreeds(res.data))
     }, []);
-    // console.log('breeds', breeds)
+    
     function forward(){
         setLast(last + 25 > 176 ? 176 : last + 25)
         setStart(start + 25 > 151 ? 151 : start + 25)
@@ -18,7 +18,7 @@ function BreedList(){
         setLast( last - 25 < 25 ? 25 : last - 25)
         setStart(start - 25 < 0 ? 0 : start - 25)
     }
-    console.log(start, last)
+    
     return(
         <div className='breeds_list'>
             <button className='forward-back' onClick={previous}>Prev</button>

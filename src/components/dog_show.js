@@ -36,7 +36,6 @@ function DogShow() {
             }
                 ))
     }, []);
-    console.log(dog);
     return (
     <div className='dog_facts'>
             <Link to="/">Back</Link>
