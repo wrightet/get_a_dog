@@ -1,5 +1,5 @@
 type Dog {
-    query getDog{
+    query {
         id: ID!
         name: String!
         life_span: String!
