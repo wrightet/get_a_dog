@@ -38,7 +38,7 @@ function DogShow() {
     }, []);
     return (
     <div className='dog_facts'>
-            <Link to="/">Back</Link>
+            
         <ul>
                 <li className='dog_fact_el'><img id='dog-image' src={`https://cdn2.thedogapi.com/images/${dog.image}.jpg`} alt=""></img></li>
                 <li className='dog_fact_el'>{dog.name}</li>
@@ -49,6 +49,7 @@ function DogShow() {
                 <li className='dog_fact_el'>Height: {dog.height} inches</li>
                 <li className='dog_fact_el'>Weight: {dog.weight} lbs</li> 
         </ul>
+            <Link className='back_button' to="/">Back</Link>
     </div>
     )
 }
